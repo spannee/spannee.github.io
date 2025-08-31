@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YourName.dev – About</title>
+  <title>backendengineer.me – About</title>
   <meta name="description" content="Personal developer site with About, links, and contact." />
   <meta name="theme-color" content="#0f5ae2" />
   <style>
@@ -41,10 +41,13 @@
     h1{font-size:clamp(2.1rem, 6vw, 3.6rem); line-height:1.1; margin:0 0 .6rem 0; letter-spacing:.2px;}
     p{font-size:clamp(1rem, 2.2vw, 1.25rem); color:var(--muted); max-width: 46ch; margin:0;}
 
-    /* Contact section (linked from nav) */
-    #contact{padding:40px 0 70px;}
-    .contact-card{width:min(900px, calc(100vw - 40px)); margin: 0 auto; background:rgba(255,255,255,.07); 
-      border:1px solid rgba(255,255,255,.18); border-radius:18px; padding: clamp(18px, 3.5vw, 28px);}
+    /* Layout helpers */
+    .stack{ display:flex; flex-direction:column; gap: clamp(12px, 2vw, 16px); }
+
+    /* Contact card inline under About */
+    #contact{ padding:0; margin-top: clamp(12px, 2vw, 16px); }
+    .contact-card{ width:100%; margin:0; background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.18); border-radius:18px; padding: clamp(14px, 2.5vw, 22px); }
     .actions{margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;}
     .btn{display:inline-block; text-decoration:none; padding:10px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.28);} 
     .btn:hover{background:var(--linkHoverBg);}    
@@ -64,7 +67,6 @@
         <div class="dot" aria-hidden="true"></div>
       </div>
       <nav>
-        <!-- Replace the href values with your actual profiles/paths -->
         <a href="https://github.com/spannee" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/spannee" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://medium.com/@santhop89" target="_blank" rel="noopener">Blog</a>
@@ -75,28 +77,27 @@
 
   <main class="hero">
     <div class="container">
-      <!-- Replace src with your headshot path. 800×800 works great. -->
-      <img class="portrait" src="IMG_7026.jpeg" alt="Headshot of Your Name" />
-      
-      <section>
-        <h1>About Me</h1>
-        <p>
-          I'm a software developer based in Bangalore, India. I come with 11 years of backend experience primarily in Java and Python. I love working on scalable systems, AI pipelines, cross stack projects and occasionally write about technology and programming. Welcome to my personal website!
-        </p>
-      </section>
-    </div>
-  </main>
+      <img class="portrait" src="https://drive.google.com/uc?export=view&id=1V25mCJmT_Je-dhIx_UzP4HRRHLANe0rr" alt="Headshot of Santhosh P" />
+      <div class="stack">
+        <section>
+          <h1>About Me</h1>
+          <p>
+            I'm a software developer based in Bangalore, India. I come with 11 years of backend experience primarily in Java and Python. I love working on scalable systems, AI pipelines, cross stack projects and occasionally write about technology and programming. Welcome to my personal website!
+          </p>
+        </section>
 
-  <section id="contact" aria-labelledby="contact-heading">
-    <div class="contact-card">
-      <h2 id="contact-heading" style="margin:0 0 .25rem 0; font-size:clamp(1.3rem, 3.2vw, 1.8rem);">Contact</h2>
-      <p style="margin:0; color:var(--muted); max-width:60ch">Tap to send me a message</p>
-      <div class="actions">
-        <a class="btn" href="mailto:santhop9@gmail.com">Email me</a>
-        <a class="btn" href="https://www.linkedin.com/in/spannee" target="_blank" rel="noopener">Message on LinkedIn</a>
+        <section id="contact" aria-labelledby="contact-heading">
+          <div class="contact-card">
+            <h2 id="contact-heading" style="margin:0 0 .25rem 0; font-size:clamp(1.3rem, 3.2vw, 1.8rem);">Contact</h2>
+            <p style="margin:0; color:var(--muted); max-width:60ch">Tap to send me a message</p>
+            <div class="actions">
+              <a class="btn" href="mailto:santhop9@gmail.com">Email me</a>
+              <a class="btn" href="https://www.linkedin.com/in/spannee" target="_blank" rel="noopener">Message on LinkedIn</a>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
-  </section>
-
+  </main>
 </body>
 </html>
